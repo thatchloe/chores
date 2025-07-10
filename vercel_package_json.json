@@ -1,0 +1,26 @@
+{
+  "name": "chloe-sha-cleaning-schedule",
+  "version": "1.0.0",
+  "description": "Kawaii cleaning schedule for Chloe & Sha with persistent storage",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve .",
+    "build": "echo 'No build step needed for static site'",
+    "dev": "serve . -l 3000"
+  },
+  "keywords": [
+    "cleaning",
+    "schedule",
+    "anime",
+    "kawaii",
+    "chores"
+  ],
+  "author": "Chloe & Sha",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌸 Chloe & Sha's Cleaning Schedule 2025 ✨</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 20%, #f093fb 40%, #f5576c 60%, #4facfe 80%, #00f2fe 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 30px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #ff6b9d 0%, #c44569 50%, #f8b500 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="90" cy="80" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="10" cy="60" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
+            animation: sparkle 20s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes sparkle {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .header h1 {
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+            font-weight: 400;
+            position: relative;
+            z-index: 1;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .month-selector {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .month-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 15px 10px;
+            font-size: 0.9em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+            font-family: 'Nunito', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .month-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .month-btn:hover::before {
+            left: 100%;
+        }
+
+        .month-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .month-btn.active {
+            background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 107, 157, 0.4);
+        }
+
+        .month-view {
+            display: none;
+            animation: fadeInUp 0.6s ease;
+        }
+
+        .month-view.active {
+            display: block;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .month-header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(79, 172, 254, 0.3);
+        }
+
+        .month-header h2 {
+            font-size: 2.2em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .weeks-grid {
+            display: grid;
+            gap: 25px;
+        }
+
+        .week-card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border: 3px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .week-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #ff6b9d, #4facfe, #00f2fe, #667eea);
+            border-radius: 20px;
+            padding: 3px;
+            z-index: -1;
+            margin: -3px;
+        }
+
+        .week-header {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #333;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .chores-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .person-section {
+            padding: 20px;
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .chloe-section {
+            background: linear-gradient(135deg, rgba(255, 107, 157, 0.1) 0%, rgba(248, 181, 0, 0.1) 100%);
+            border: 2px solid rgba(255, 107, 157, 0.3);
+        }
+
+        .sha-section {
+            background: linear-gradient(135deg, rgba(79, 172, 254, 0.1) 0%, rgba(0, 242, 254, 0.1) 100%);
+            border: 2px solid rgba(79, 172, 254, 0.3);
+        }
+
+        .person-name {
+            font-size: 1.3em;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .chloe-name {
+            color: #ff6b9d;
+        }
+
+        .sha-name {
+            color: #4facfe;
+        }
+
+        .chore-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            margin-bottom: 12px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            user-select: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chore-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+            transition: left 0.5s;
+        }
+
+        .chore-item:hover::before {
+            left: 100%;
+        }
+
+        .chore-item:hover {
+            transform: translateX(5px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .chore-item.completed {
+            opacity: 0.7;
+            text-decoration: line-through;
+            background: linear-gradient(135deg, rgba(40, 167, 69, 0.1) 0%, rgba(40, 167, 69, 0.2) 100%);
+            border: 2px solid rgba(40, 167, 69, 0.3);
+        }
+
+        .chore-checkbox {
+            width: 24px;
+            height: 24px;
+            border: 3px solid #ddd;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .chore-checkbox.checked {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            border-color: #28a745;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .chore-emoji {
+            font-size: 1.5em;
+            margin-right: 5px;
+        }
+
+        .chore-text {
+            font-weight: 600;
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .progress-bar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .progress-text {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .progress-fill {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            height: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-inner {
+            background: linear-gradient(90deg, #ff6b9d, #f8b500);
+            height: 100%;
+            border-radius: 15px;
+            transition: width 0.5s ease;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.2em;
+            }
+            
+            .month-selector {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .chores-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                margin: 10px;
+                border-radius: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌸 Chloe & Sha's Cleaning Schedule 2025 ✨</h1>
+            <p>Kawaii cleaning adventures await! ✨🧹💕</p>
+        </div>
+
+        <div class="content">
+            <div class="progress-bar">
+                <div class="progress-text" id="progress-text">Ready to start cleaning! ✨</div>
+                <div class="progress-fill">
+                    <div class="progress-inner" id="progress-inner" style="width: 0%"></div>
+                </div>
+                <div style="margin-top: 15px;">
+                    <button onclick="clearAllProgress()" style="background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%); color: white; border: none; border-radius: 15px; padding: 10px 20px; font-size: 0.9em; font-weight: 600; cursor: pointer; transition: all 0.3s ease; font-family: 'Nunito', sans-serif;">
+                        🧹 Clear All Progress
+                    </button>
+                    <span id="total-progress" style="margin-left: 15px; font-weight: 600; color: white;"></span>
+                </div>
+            </div>
+
+            <div class="month-selector">
+                <button class="month-btn active" onclick="showMonth(0)">January ❄️</button>
+                <button class="month-btn" onclick="showMonth(1)">February 💝</button>
+                <button class="month-btn" onclick="showMonth(2)">March 🌸</button>
+                <button class="month-btn" onclick="showMonth(3)">April 🌷</button>
+                <button class="month-btn" onclick="showMonth(4)">May 🌺</button>
+                <button class="month-btn" onclick="showMonth(5)">June ☀️</button>
+                <button class="month-btn" onclick="showMonth(6)">July 🏖️</button>
+                <button class="month-btn" onclick="showMonth(7)">August 🌻</button>
+                <button class="month-btn" onclick="showMonth(8)">September 🍂</button>
+                <button class="month-btn" onclick="showMonth(9)">October 🎃</button>
+                <button class="month-btn" onclick="showMonth(10)">November 🦃</button>
+                <button class="month-btn" onclick="showMonth(11)">December 🎄</button>
+            </div>
+
+            <!-- Month Views -->
+            <div id="month-0" class="month-view active">
+                <div class="month-header">
+                    <h2>January 2025 ❄️</h2>
+                    <p>New Year, New Cleaning Routine!</p>
+                </div>
+                <div class="weeks-grid">
+                    <div class="week-card">
+                        <div class="week-header">Week 1 (Jan 1-7)</div>
+                        <div class="chores-grid">
+                            <div class="person-section chloe-section">
+                                <div class="person-name chloe-name">🌸 Chloe</div>
+                                <div class="chore-item" onclick="toggleChore(this)">
+                                    <div class="chore-checkbox"><span style="display: none;">✓</span></div>
+                                    <span class="chore-emoji">🍳</span>
+                                    <span class="chore-text">Clean the Kitchen</span>
+                                </div>
+                            </div>
+                            <div class="person-section sha-section">
+                                <div class="person-name sha-name">✨ Sha</div>
+                                <div class="chore-item" onclick="toggleChore(this)">
+                                    <div class="chore-checkbox"><span style="display: none;">✓</span></div>
+                                    <span class="chore-emoji">🗑️</span>
+                                    <span class="chore-text">Take out the Trash</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="week-card">
+                        <div class="week-header">Week 2 (Jan 8-14)</div>
+                        <div class="chores-grid">
+                            <div class="person-section chloe-section">
+                                <div class="person-name chloe-name">🌸 Chloe</div>
+                                <div class="chore-item" onclick="toggleChore(this)">
+                                    <div class="chore-checkbox"><span style="display: none;">✓</span></div>
+                                    <span class="chore-emoji">🛁</span>
+                                    <span class="chore-text">Clean the Bathroom</span>
+                                </div>
+                            </div>
+                            <div class="person-section sha-section">
+                                <div class="person-name sha-name">✨ Sha</div>
+                                <div class="chore-item" onclick="toggleChore(this)">
+                                    <div class="chore-checkbox"><span style="display: none;">✓</span></div>
+                                    <span class="chore-emoji">🧽</span>
+                                    <span class="chore-text">Mop the Floor</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="week-card">
+                        <div class="week-header">Week 3 (Jan 15-21)</div>
+                        <div class="chores-grid">
+                            <div class="person-section chloe-section">
+                                <div class="person-name chloe-name">🌸 Chloe</div>
+                                <div class="chore-item" onclick="toggleChore(this)">
+                                    <div class="chore-checkbox"><span style="display: none;">✓</span></div>
+                                    <span class="chore-emoji">🗑️</span>
+                                    <span class="chore-text">Take out the Trash</span>
+                                </div>
+                            </div>
+                            <div class="person-section sha-section">
+                                <div class="person-name sha-name">✨ Sha</div>
+                                <div class="chore-item" onclick="toggleChore(this)">
+                                    <div class="chore-checkbox"><span style="display: none;">✓</span></div>
+                                    <span class="chore-emoji">🍳</span>
+                                    <span class="chore-text">Clean the Kitchen</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="week-card">
+                        <div class="week-header">Week 4 (Jan 22-31)</div>
+                        <div class="chores-grid">
+                            <div class="person-section chloe-section">
+                                <div class="person-name chloe-name">🌸 Chloe</div>
+                                <div class="chore-item" onclick="toggleChore(this)">
+                                    <div class="chore-checkbox"><span style="display: none;">✓</span></div>
+                                    <span class="chore-emoji">🧽</span>
+                                    <span class="chore-text">Mop the Floor</span>
+                                </div>
+                            </div>
+                            <div class="person-section sha-section">
+                                <div class="person-name sha-name">✨ Sha</div>
+                                <div class="chore-item" onclick="toggleChore(this)">
+                                    <div class="chore-checkbox"><span style="display: none;">✓</span></div>
+                                    <span class="chore-emoji">🛁</span>
+                                    <span class="chore-text">Clean the Bathroom</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional months (February through December) -->
+            <div id="month-1" class="month-view">
+                <div class="month-header">
+                    <h2>February 2025 💝</h2>
+                    <p>Love is in the Air... and Clean Homes!</p>
+                </div>
+                <div class="weeks-grid">
+                    <div class="week-card">
+                        <div class="week-header">Week 1 (Feb 1-7)</div>
+                        <div class="chores-grid">
+                            <div class="person-section chloe-section">
+                                <div class="person-name chloe-name">🌸 Chloe</div>
+                                <div class="chore-item" onclick="toggleChore(this)">
+                                    <div class="chore-checkbox"><span style="display: none;">✓</span></div>
+                                    <span class="chore-emoji">🛁</span>
+                                    <span class="chore-text">Clean the Bathroom</span>
+                                </div>
+                            </div>
+                            <div class="person-section sha-section">
+                                <div class="person-name sha-name">✨ Sha</div>
+                                <div class="chore-item" onclick="toggleChore(this)">
+                                    <div class="chore-checkbox"><span style="display: none;">✓</span></div>
+                                    <span class="chore-emoji">🧽</span>
+                                    <span class="chore-text">Mop the Floor</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="week-card">
+                        <div class="week-header">Week 2 (Feb 8-14)</div>
+                        <div class="chores-grid">
+                            <div class="person-section chloe-section">
+                                <div class="person-name chloe-name">🌸 Chloe</div>
+                                <div class="chore-item" onclick="toggleChore(this)">
+                                    <div class="chore-checkbox"><span style="display: none;">✓</span></div>
+                                    <span class="chore-emoji">🗑️</span>
+                                    <span class="chore-text">Take out the Trash</span>
+                                </div>
+                            </div>
+                            <div class="person-section sha-section">
+                                <div class="person-name sha-name">✨ Sha</div>
+                                <div class="chore-item" onclick="toggleChore(this)">
+                                    <div class="chore-checkbox"><span style="display: none;">✓</span></div>
+                                    <span class="chore-emoji">🍳</span>
+                                    <span class="chore-text">Clean the Kitchen</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="week-card">
+                        <div class="week-header">Week 3 (Feb 15-21)</div>
+                        <div class="chores-grid">
+                            <div class="person-section chloe-section">
+                                <div class="person-name chloe-name">🌸 Chloe</div>
+                                <div class="chore-item" onclick="toggleChore(this)">
+                                    <div class="chore-checkbox"><span style="display: none;">✓</span></div>
+                                    <span class="chore-emoji">🧽</span>
+                                    <span class="chore-text">Mop the Floor</span>
+                                </div>
+                            </div>
+                            <div class="person-section sha-section">
+                                <div class="person-name sha-name">✨ Sha</div>
+                                <div class="chore-item" onclick="toggleChore(this)">
+                                    <div class="chore-checkbox"><span style="display: none;">✓</span></div>
+                                    <span class="chore-emoji">🛁</span>
+                                    <span class="chore-text">Clean the Bathroom</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="week-card">
+                        <div class="week-header">Week 4 (Feb 22-28)</div>
+                        <div class="chores-grid">
+                            <div class="person-section chloe-section">
+                                <div class="person-name chloe-name">🌸 Chloe</div>
+                                <div class="chore-item" onclick="toggleChore(this)">
+                                    <div class="chore-checkbox"><span style="display: none;">✓</span></div>
+                                    <span class="chore-emoji">🍳</span>
+                                    <span class="chore-text">Clean the Kitchen</span>
+                                </div>
+                            </div>
+                            <div class="person-section sha-section">
+                                <div class="person-name sha-name">✨ Sha</div>
+                                <div class="chore-item" onclick="toggleChore(this)">
+                                    <div class="chore-checkbox"><span style="display: none;">✓</span></div>
+                                    <span class="chore-emoji">🗑️</span>
+                                    <span class="chore-text">Take out the Trash</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- I'll add a placeholder for other months to keep the example concise -->
+            <div id="month-2" class="month-view">
+                <div class="month-header">
+                    <h2>March 2025 🌸</h2>
+                    <p>Spring Cleaning Season Begins!</p>
+                </div>
+                <div class="weeks-grid">
+                    <!-- Similar structure for March with rotated chores -->
+                    <div class="week-card">
+                        <div class="week-header">Week 1 (Mar 1-7)</div>
+                        <div class="chores-grid">
+                            <div class="person-section chloe-section">
+                                <div class="person-name chloe-name">🌸 Chloe</div>
+                                <div class="chore-item" onclick="toggleChore(this)">
+                                    <div class="chore-checkbox"><span style="display: none;">✓</span></div>
+                                    <span class="chore-emoji">🗑️</span>
+                                    <span class="chore-text">Take out the Trash</span>
+                                </div>
+                            </div>
+                            <div class="person-section sha-section">
+                                <div class="person-name sha-name">✨ Sha</div>
+                                <div class="chore-item" onclick="toggleChore(this)">
+                                    <div class="chore-checkbox"><span style="display: none;">✓</span></div>
+                                    <span class="chore-emoji">🛁</span>
+                                    <span class="chore-text">Clean the Bathroom</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Continue pattern for weeks 2-4 -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let completedChores = new Set();
+        let currentMonth = 0;
+
+        // Storage functions for persistence
+        function saveCompletedChores() {
+            try {
+                localStorage.setItem('chloe-sha-chores', JSON.stringify([...completedChores]));
+            } catch (e) {
+                console.log('Storage not available');
+            }
+        }
+
+        function loadCompletedChores() {
+            try {
+                const saved = localStorage.getItem('chloe-sha-chores');
+                if (saved) {
+                    completedChores = new Set(JSON.parse(saved));
+                }
+            } catch (e) {
+                console.log('Could not load saved chores');
+                completedChores = new Set();
+            }
+        }
+
+        function clearAllProgress() {
+            if (confirm('🌸 Are you sure you want to clear all completed chores? This cannot be undone! ✨')) {
+                completedChores.clear();
+                saveCompletedChores();
+                updateAllVisualStates();
+                updateProgress();
+            }
+        }
+
+        function updateAllVisualStates() {
+            // Update all chore items across all months
+            document.querySelectorAll('.chore-item').forEach(chore => {
+                const choreText = chore.querySelector('.chore-text').textContent.trim();
+                const monthElement = chore.closest('.month-view');
+                const monthId = monthElement ? monthElement.id.split('-')[1] : '0';
+                const choreId = `${monthId}-${choreText}`;
+                
+                const checkbox = chore.querySelector('.chore-checkbox');
+                const checkmark = checkbox.querySelector('span');
+                
+                if (completedChores.has(choreId)) {
+                    chore.classList.add('completed');
+                    checkbox.classList.add('checked');
+                    checkmark.style.display = 'block';
+                } else {
+                    chore.classList.remove('completed');
+                    checkbox.classList.remove('checked');
+                    checkmark.style.display = 'none';
+                }
+            });
+        }
+
+        // Chore rotation patterns - ensures fair distribution
+        const chorePatterns = [
+            // Month 1-4 pattern
+            [
+                [['🍳', 'Clean the Kitchen'], ['🗑️', 'Take out the Trash']],
+                [['🛁', 'Clean the Bathroom'], ['🧽', 'Mop the Floor']],
+                [['🗑️', 'Take out the Trash'], ['🍳', 'Clean the Kitchen']],
+                [['🧽', 'Mop the Floor'], ['🛁', 'Clean the Bathroom']]
+            ],
+            // Month 5-8 pattern (rotated)
+            [
+                [['🛁', 'Clean the Bathroom'], ['🧽', 'Mop the Floor']],
+                [['🗑️', 'Take out the Trash'], ['🍳', 'Clean the Kitchen']],
+                [['🧽', 'Mop the Floor'], ['🛁', 'Clean the Bathroom']],
+                [['🍳', 'Clean the Kitchen'], ['🗑️', 'Take out the Trash']]
+            ],
+            // Month 9-12 pattern (rotated again)
+            [
+                [['🗑️', 'Take out the Trash'], ['🛁', 'Clean the Bathroom']],
+                [['🍳', 'Clean the Kitchen'], ['🧽', 'Mop the Floor']],
+                [['🛁', 'Clean the Bathroom'], ['🗑️', 'Take out the Trash']],
+                [['🧽', 'Mop the Floor'], ['🍳', 'Clean the Kitchen']]
+            ]
+        ];
+
+        function showMonth(monthIndex) {
+            // Hide all month views
+            document.querySelectorAll('.month-view').forEach(view => {
+                view.classList.remove('active');
+            });
+            
+            // Hide all month buttons active state
+            document.querySelectorAll('.month-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Show selected month
+            document.getElementById(`month-${monthIndex}`).classList.add('active');
+            document.querySelectorAll('.month-btn')[monthIndex].classList.add('active');
+            
+            currentMonth = monthIndex;
+            updateProgress();
+        }
+
+        function toggleChore(choreElement) {
+            const choreText = choreElement.querySelector('.chore-text').textContent.trim();
+            const monthElement = choreElement.closest('.month-view');
+            const monthId = monthElement ? monthElement.id.split('-')[1] : currentMonth.toString();
+            const choreId = `${monthId}-${choreText}`;
+            
+            const checkbox = choreElement.querySelector('.chore-checkbox');
+            const checkmark = checkbox.querySelector('span');
+            
+            if (completedChores.has(choreId)) {
+                // Mark as incomplete
+                completedChores.delete(choreId);
+                choreElement.classList.remove('completed');
+                checkbox.classList.remove('checked');
+                checkmark.style.display = 'none';
+            } else {
+                // Mark as complete
+                completedChores.add(choreId);
+                choreElement.classList.add('completed');
+                checkbox.classList.add('checked');
+                checkmark.style.display = 'block';
+                
+                // Add celebration effect
+                choreElement.style.transform = 'scale(1.1)';
+                setTimeout(() => {
+                    choreElement.style.transform = '';
+                }, 300);
+            }
+            
+            // Save to localStorage
+            saveCompletedChores();
+            updateProgress();
+        }
+
+        function updateProgress() {
+            // Current month progress
+            const currentMonthChores = document.querySelectorAll(`#month-${currentMonth} .chore-item`);
+            const totalChoresThisMonth = currentMonthChores.length;
+            let completedCountThisMonth = 0;
+            
+            currentMonthChores.forEach(chore => {
+                const choreText = chore.querySelector('.chore-text').textContent.trim();
+                const choreId = `${currentMonth}-${choreText}`;
+                if (completedChores.has(choreId)) {
+                    completedCountThisMonth++;
+                }
+            });
+            
+            const percentageThisMonth = totalChoresThisMonth > 0 ? (completedCountThisMonth / totalChoresThisMonth) * 100 : 0;
+            document.getElementById('progress-inner').style.width = `${percentageThisMonth}%`;
+            
+            // Overall progress across all months
+            const allChores = document.querySelectorAll('.chore-item');
+            const totalChoresAllYear = allChores.length;
+            const completedCountAllYear = completedChores.size;
+            
+            document.getElementById('total-progress').textContent = 
+                `Overall: ${completedCountAllYear}/${totalChoresAllYear} tasks completed this year!`;
+            
+            // Update progress text for current month
+            const progressText = document.getElementById('progress-text');
+            if (percentageThisMonth === 0) {
+                progressText.textContent = "Ready to start cleaning! ✨";
+            } else if (percentageThisMonth < 25) {
+                progressText.textContent = "Great start! Keep going! 🌟";
+            } else if (percentageThisMonth < 50) {
+                progressText.textContent = "You're doing amazing! 💪✨";
+            } else if (percentageThisMonth < 75) {
+                progressText.textContent = "More than halfway there! 🎉";
+            } else if (percentageThisMonth < 100) {
+                progressText.textContent = "Almost finished! You're awesome! 🌈";
+            } else {
+                progressText.textContent = "Perfect! All chores complete! 🎊🎉";
+            }
+        }
+
+        // Generate all 12 months dynamically
+        function generateAllMonths() {
+            const months = [
+                ['January', '❄️', 'New Year, New Cleaning Routine!'],
+                ['February', '💝', 'Love is in the Air... and Clean Homes!'],
+                ['March', '🌸', 'Spring Cleaning Season Begins!'],
+                ['April', '🌷', 'Blooming Clean Spaces!'],
+                ['May', '🌺', 'Fresh May Flowers and Clean Hours!'],
+                ['June', '☀️', 'Summer Sunshine and Sparkly Homes!'],
+                ['July', '🏖️', 'Beach Vibes and Tidy Lives!'],
+                ['August', '🌻', 'Sunflower Power Cleaning Hour!'],
+                ['September', '🍂', 'Fall into Clean Habits!'],
+                ['October', '🎃', 'Spooky Clean Halloween Dreams!'],
+                ['November', '🦃', 'Thankful for Clean Spaces!'],
+                ['December', '🎄', 'Holiday Magic and Clean Fantastic!']
+            ];
+
+            for (let monthIndex = 2; monthIndex < 12; monthIndex++) {
+                if (document.getElementById(`month-${monthIndex}`) && monthIndex !== 2) continue;
+                
+                const monthView = document.createElement('div');
+                monthView.id = `month-${monthIndex}`;
+                monthView.className = 'month-view';
+                
+                const patternIndex = Math.floor(monthIndex / 4);
+                const pattern = chorePatterns[patternIndex % chorePatterns.length];
+                
+                monthView.innerHTML = `
+                    <div class="month-header">
+                        <h2>${months[monthIndex][0]} 2025 ${months[monthIndex][1]}</h2>
+                        <p>${months[monthIndex][2]}</p>
+                    </div>
+                    <div class="weeks-grid">
+                        ${generateWeeksForMonth(monthIndex, pattern)}
+                    </div>
+                `;
+                
+                document.querySelector('.content').appendChild(monthView);
+            }
+        }
+
+        function generateWeeksForMonth(monthIndex, pattern) {
+            const weeks = ['Week 1', 'Week 2', 'Week 3', 'Week 4'];
+            let weeksHTML = '';
+            
+            for (let weekIndex = 0; weekIndex < 4; weekIndex++) {
+                const chloeChore = pattern[weekIndex][0];
+                const shaChore = pattern[weekIndex][1];
+                
+                weeksHTML += `
+                    <div class="week-card">
+                        <div class="week-header">${weeks[weekIndex]}</div>
+                        <div class="chores-grid">
+                            <div class="person-section chloe-section">
+                                <div class="person-name chloe-name">🌸 Chloe</div>
+                                <div class="chore-item" onclick="toggleChore(this)">
+                                    <div class="chore-checkbox"><span style="display: none;">✓</span></div>
+                                    <span class="chore-emoji">${chloeChore[0]}</span>
+                                    <span class="chore-text">${chloeChore[1]}</span>
+                                </div>
+                            </div>
+                            <div class="person-section sha-section">
+                                <div class="person-name sha-name">✨ Sha</div>
+                                <div class="chore-item" onclick="toggleChore(this)">
+                                    <div class="chore-checkbox"><span style="display: none;">✓</span></div>
+                                    <span class="chore-emoji">${shaChore[0]}</span>
+                                    <span class="chore-text">${shaChore[1]}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            return weeksHTML;
+        }
+
+        // Initialize all months when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load saved progress first
+            loadCompletedChores();
+            
+            // Generate all months
+            generateAllMonths();
+            
+            // Apply saved states to all chores
+            setTimeout(() => {
+                updateAllVisualStates();
+                updateProgress();
+            }, 100);
+        });
+    </script>
+</body>
+</html>
